@@ -1,0 +1,164 @@
+﻿
+@{
+    ViewData["Title"] = "Net";
+}
+
+
+
+<form class="form-group" method="post">
+
+    <h1 class="display-3">Net Salary To Gross Salary</h1>
+    <input type="hidden" name="mode" value="PinRequest" />
+
+    <div class="form-group">
+        <label for="exampleInputPassword1">Type Net Salary</label>
+        <input class="form-control" value="@Model.price" name="price" placeholder="Your Price">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Gross Salary</label>
+        <input class="form-control" name="tot_amount" id="tot_amount" value="@Model.total_price" readonly />
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Total Tax</label>
+        <input class="form-control" name="tot_minus" id="tot_minus" type="text" value="@Model.minus" readonly />
+    </div>
+    <div class="form-group">
+        <button class="btn btn-success" type="submit">Ok</button>
+    </div>
+
+
+    <br />
+    <h4 class="display-5">Description of Persantage</h4>
+    <h4 class="display-7">Tax1</h4>
+    <div class="form-group">
+        <table class="table">
+
+            <tr>
+                <td>Description</td>
+                <td>Food</td>
+            </tr>
+            <tr>
+                <td>Persantage</td>
+                <td>5%</td>
+            </tr>
+            <tr>
+                <td>Amount of This Tax</td>
+                <td><input name="food_tax" id="food_tax" readonly class=" border-0" value="@Model.tax" /></td>
+            </tr>
+        </table>
+    </div>
+    <h4 class="display-7">Tax2</h4>
+    <div class="form-group">
+        <table class="table">
+
+            <tr>
+                <td>Description</td>
+                <td>Travel</td>
+            </tr>
+            <tr>
+                <td>Persantage</td>
+                <td>5%</td>
+            </tr>
+            <tr>
+                <td>Amount of This Tax</td>
+                <td><input name="medical_tax" id="medical_tax" readonly class=" border-0" value="@Model.medical" /></td>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <h4 class="display-7">Tax3</h4>
+    <div class="form-group">
+        <table class="table">
+
+            <tr>
+                <td>Description</td>
+                <td>Medical</td>
+            </tr>
+            <tr>
+                <td>Persantage</td>
+                <td>5%</td>
+            </tr>
+            <tr>
+                <td>Amount of This Tax</td>
+                <td><input name="travel_tax" id="travel_tax" readonly class=" border-0" value="@Model.travel" /></td>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <h4 class="display-7">Income Tax Informtion</h4>
+    <h5 class="display-8">First Tax</h5>
+    <div class="form-group">
+        <table class="table">
+
+            <tr>
+                <td>Description</td>
+                <td>200000 to 400000</td>
+            </tr>
+            <tr>
+                <td>Persantage</td>
+                <td>5%</td>
+            </tr>
+            <tr>
+                <td>Amount of This Tax</td>
+                <td><input name="first_tax" id="first_tax" readonly class=" border-0" value="@Model.finaltax1" /></td>
+            </tr>
+        </table>
+    </div>
+    <br />
+
+    <h5 class="display-8">Second Tax</h5>
+    <div class="form-group">
+        <table class="table">
+
+            <tr>
+                <td>Description</td>
+                <td>400000 to 800000</td>
+            </tr>
+            <tr>
+                <td>Persantage</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>Amount of This Tax</td>
+                <td><input name="second_tax" id="second_tax" readonly class=" border-0" value="@Model.finaltax2" /></td>
+            </tr>
+        </table>
+    </div>
+    <h5 class="display-8">Third Tax</h5>
+    <div class="form-group">
+        <table class="table">
+
+            <tr>
+                <td>Description</td>
+                <td> 800000 to 1200000</td>
+            </tr>
+            <tr>
+                <td>Persantage</td>
+                <td>20%</td>
+            </tr>
+            <tr>
+                <td>Amount of This Tax</td>
+                <td><input name="third_tax" id="third_tax" readonly class=" border-0" value="@Model.finaltax3" /></td>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <h5 class="display-8">Fourth Tax</h5>
+    <div class="form-group">
+        <table class="table">
+
+            <tr>
+                <td>Description</td>
+                <td>More Than  1200000 </td>
+            </tr>
+            <tr>
+                <td>Persantage</td>
+                <td>25%</td>
+            </tr>
+            <tr>
+                <td>Amount of This Tax</td>
+                <td><input name="fourth_tax" id="fourth_tax" readonly class=" border-0" value="@Model.finaltax4" /></td>
+            </tr>
+        </table>
+    </div>
+</form>
