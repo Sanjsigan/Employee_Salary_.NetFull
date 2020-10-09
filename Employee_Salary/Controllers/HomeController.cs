@@ -9,6 +9,8 @@ using Employee_Salary.Models;
 
 namespace Employee_Salary.Controllers
 {
+
+    
     public class HomeController : Controller
     {
   

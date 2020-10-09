@@ -27,5 +27,7 @@ namespace Employee_Salary.Models
         public double finaltax3{get; set;}
 
         public double finaltax4 { get; set; }
+
+        public int tot_persantage { get; set; }
     }
 }
